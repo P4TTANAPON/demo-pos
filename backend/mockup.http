@@ -1,0 +1,11 @@
+### product
+GET http://localhost:3000/api/v2/product HTTP/1.1
+
+### transaction
+GET http://localhost:3000/api/v2/transaction HTTP/1.1
+
+### login
+POST http://localhost:3000/api/v2/login HTTP/1.1
+Content-Type: application/json
+
+{"username":"lek", "password":"555"}

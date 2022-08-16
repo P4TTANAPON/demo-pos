@@ -1,0 +1,100 @@
+
+### Get Product 
+GET http://localhost:8081/api/v2/product?token=1234&level=admin HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+
+### Get Product with keyword
+GET http://localhost:8081/api/v2/product/name/Node HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+
+
+### Get Product by ID 
+GET http://localhost:8081/api/v2/product/id/16 HTTP/1.1
+
+
+### Delete Product by ID 
+DELETE  http://localhost:8081/api/v2/product/id/44 HTTP/1.1
+
+
+
+### Create 
+POST http://localhost:8081/api/v2/product HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name";
+
+AngularSamart 
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="stock";
+
+300
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="price";
+
+180
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/png
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+### Edit 
+PUT http://localhost:8081/api/v2/product HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="product_id";
+
+44
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name";
+
+Arduino board (Edit) 
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="stock";
+
+101
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="price";
+
+200
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="test_2nd.jpg"
+Content-Type: image/png
+
+< ./test_2nd.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
+---------------------------------------------
+### Heroku
+
+### Create 
+POST https://cmgostock.herokuapp.com/api/v2/product HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name";
+
+Angular2 
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="stock";
+
+300
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="price";
+
+180
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/png
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

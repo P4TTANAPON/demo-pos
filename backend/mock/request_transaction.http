@@ -1,0 +1,20 @@
+
+### Get Transaction 
+GET http://localhost:8081/api/v2/transaction HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+Content-Type: application/json
+
+
+### Create Tranaction 
+POST http://localhost:8081/api/v2/transaction HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMmI4NGJlZWQxZGJlODUzYzVkYTlmMSIsImxldmVsIjoibm9ybWFsIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0NjgwMTU5MywiZXhwIjoxNjQ3ODAxNTkzLCJhdWQiOiJodHRwOi8vY29kZW1vYmlsZXMuY29tIiwiaXNzIjoiQ29kZU1vYmlsZXMgTHRkIiwic3ViIjoiY2hhaXlhc2l0LnRAZ21haWwuY29tIn0.DpNYLcF4HygsYjEdAbrO56csXoRJPkflOZG1Sht1A4xXKWB4d7kYRRyVcJGz86aRidGlUFvaJu3-HUo6AXu2Mj5aquQ4vA2CggIpJkjPFnASabBHEdJPi09C4D_3ss6nqmhw8IIB4N77a8EiTXnWrvrMGClpfQRyUvzykpaQdBg
+Content-Type: application/json
+
+{
+  "total": 50.50,
+  "paid": 100,
+  "change": 49.50,
+  "payment_type": "cash",
+  "payment_detail": "full",
+  "order_list": "[]"  
+}
